@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -e
+
+cat <<EOT >> /etc/initramfs-tools/modules
+# KMS
+intel_agp
+drm
+i915 modeset=1
+EOT
+
+sed -i 's/quiet/quiet\ splash/' /etc/default/grub;
+
+plymouth-set-default-theme pureos;
+update-initramfs -u;
+update-grub2;
+
+#DEBHELPER#

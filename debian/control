@@ -1,0 +1,13 @@
+Source: plymouth-theme-pureos
+Section: x11
+Priority: optional
+Maintainer: Adrian Alves <adrian@puri.sm>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.6
+Homepage: http://www.puri.sm
+
+Package: plymouth-theme-pureos
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, plymouth, plymouth-themes
+Description: plytmouth theme for PureOS
+ Plymouth Theme for PureOS
