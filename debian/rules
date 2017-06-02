@@ -1,9 +1,7 @@
 #!/usr/bin/make -f
 
 %:
-	dh $@ 
+	dh $@
 
-override_dh_auto_install:
-		mkdir -p debian/plymouth-theme-pureos/usr/share/plymouth/themes
-		cp -r pureos debian/plymouth-theme-pureos/usr/share/plymouth/themes/.
-
+override_dh_builddeb:
+	dh_builddeb -- -Zxz

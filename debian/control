@@ -1,13 +1,21 @@
 Source: plymouth-theme-pureos
-Section: x11
+Section: misc
 Priority: optional
-Maintainer: Adrian Alves <adrian@puri.sm>
+Maintainer: Matthias Klumpp <matthias.klumpp@puri.sm>
 Build-Depends: debhelper (>= 9)
+Vcs-Git: https://github.com/purism/plymouth-theme-pureos
+Vcs-Browser: https://github.com/purism/plymouth-theme-pureos.git
 Standards-Version: 3.9.6
-Homepage: http://www.puri.sm
 
 Package: plymouth-theme-pureos
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, plymouth, plymouth-themes
-Description: plytmouth theme for PureOS
- Plymouth Theme for PureOS
+Depends: plymouth,
+         plymouth-themes,
+         ${misc:Depends}
+Provides: plymouth-theme
+Description: Graphical boot animation and logger - PureOS theme
+ Plymouth is an application that runs very early in the boot process
+ (even before the root filesystem is mounted!) that provides a graphical
+ boot animation while the boot process happens in the background.
+ .
+ This package contains the default PureOS theme.
